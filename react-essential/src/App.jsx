@@ -1,4 +1,5 @@
 import DynamicsValues from './components/DynamicsValues';
+import PropsComponents from './components/PropsComponents';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <main>
         <h2>Time to get started!</h2>
         <DynamicsValues />
+
+        <br />
+        <PropsComponents />
       </main>
     </div>
   );
