@@ -4,7 +4,7 @@ import PropsComponents from './components/PropsComponents';
 import TabbButton from './components/TabbButton';
 import { EXAMPLES } from './data.js';
 function App() {
-  const [selectionTopic, setSelectionTopic] = useState('components');
+  const [selectionTopic, setSelectionTopic] = useState();
   function handleSelect(selectButton) {
     setSelectionTopic(selectButton);
     console.log(selectButton);
@@ -37,12 +37,15 @@ function App() {
               State
             </TabbButton>
           </menu>
-          {selectionTopic}
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectionTopic].title}</h3>
-            <p>{EXAMPLES[selectionTopic].description}</p>
-            <prev>{EXAMPLES[selectionTopic].code}</prev>
-          </div>
+          {!selectionTopic ? (
+            'Please selected one of them'
+          ) : (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectionTopic].title}</h3>
+              <p>{EXAMPLES[selectionTopic].description}</p>
+              <pre>{EXAMPLES[selectionTopic].code}</pre>
+            </div>
+          )}
         </div>
       </main>
     </div>
