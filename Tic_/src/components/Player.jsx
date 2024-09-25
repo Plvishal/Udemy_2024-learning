@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Player({ name, symbol }) {
+function Player({ name, symbol, isActive }) {
   const [isEditing, setIsEditing] = useState(false);
   const [inpurValue, setInputValue] = useState();
   const handleEdit = () => {
@@ -10,7 +10,7 @@ function Player({ name, symbol }) {
     setIsEditing(false);
   };
   return (
-    <li>
+    <li className={isActive ? 'active' : undefined}>
       {!isEditing ? (
         <span className="player">
           <span className="player-name">{name}</span>
