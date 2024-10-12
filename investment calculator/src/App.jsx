@@ -15,11 +15,11 @@ function App() {
     setUserInput((prevSate) => {
       return {
         ...prevSate,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   }
-  console.log(userInput);
+
   return (
     <>
       <Header />
