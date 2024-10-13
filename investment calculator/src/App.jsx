@@ -8,9 +8,10 @@ function App() {
   const [userInput, setUserInput] = useState({
     initialInvestment: 1200,
     annualInvestmnet: 200,
-    expectedReturn: 500,
+    expectedReturn: 5,
     duration: 5,
   });
+  const inputIsValid = userInput.duration >= 1;
   function handleChange(inputIdentifier, newValue) {
     setUserInput((prevSate) => {
       return {
@@ -24,8 +25,8 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} handleChange={handleChange} />
-
-      <Result input={userInput} />
+      {!inputIsValid && <p>Please enter duration greater than 0</p>}
+      {inputIsValid && <Result input={userInput} />}
     </>
   );
 }
