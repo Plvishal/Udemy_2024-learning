@@ -6,6 +6,9 @@ function Counter() {
   const incrementHandler = () => {
     dispatch({ type: 'increment' });
   };
+  const incrementDynamicHander = () => {
+    dispatch({ type: 'increase', amount: 5 });
+  };
   const decrementHandler = () => {
     dispatch({ type: 'decrement' });
   };
@@ -15,6 +18,9 @@ function Counter() {
       <div>{counter}</div>
       <button style={styles.button} onClick={incrementHandler}>
         Increment
+      </button>
+      <button style={styles.button} onClick={incrementDynamicHander}>
+        Increment BY 5
       </button>
       <button style={styles.button} onClick={decrementHandler}>
         Decrement
