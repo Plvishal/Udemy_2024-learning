@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import './App.css';
 import MyCart from './components/Cart/MyCart';
 import Header from './components/Header';
+import Product from './components/Shop/Product';
 
 function App() {
   const uiIsVisible = useSelector((state) => state.ui.cartVisible);
@@ -11,8 +12,11 @@ function App() {
         <Header />
       </header>
       <main className="w-full h-screen top-0 bg-black text-white ">
-        <div className="relative top-20 flex justify-center items-center">
+        <div className="relative top-20 flex justify-center items-center  flex-col">
           {uiIsVisible && <MyCart />}
+          <div>
+            <Product />
+          </div>
         </div>
       </main>
     </>
