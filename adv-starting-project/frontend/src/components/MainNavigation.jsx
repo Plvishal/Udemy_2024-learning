@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import classes from './MainNavigation.module.css';
 
 function MainNavigation() {
@@ -24,13 +24,12 @@ function MainNavigation() {
                   isActive ? classes.active : undefined
                 }
               >
-                Product
+                Events
               </NavLink>
             </li>
           </ul>
         </nav>
       </header>
-      <Outlet />
     </>
   );
 }

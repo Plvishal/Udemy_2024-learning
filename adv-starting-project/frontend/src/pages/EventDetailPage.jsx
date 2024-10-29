@@ -1,10 +1,11 @@
 import React from 'react';
 
 function EventDetailPage() {
-  return <div>EventDetailPage</div>;
+  return (
+    <>
+      <h1>Event Detail Page</h1>
+    </>
+  );
 }
 
-export default EventDetailPage
-EventDetailPage
-EventDetailPage;
-;
+export default EventDetailPage;
