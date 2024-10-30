@@ -39,16 +39,17 @@ function EventPage() {
   //   fetchEvents();
   // }, []);
   const events = useLoaderData();
-  return (
-    // <>
-    //   <div style={{ textAlign: 'center' }}>
-    //     {isLoading && <p>Loading ............</p>}
-    //     {error && <p>{error}</p>}
-    //   </div>
-    //   {!isLoading && fetchedEvent && <EventsList events={fetchedEvent} />}
-    // </>
-    <EventsList events={events} />
-  );
+  return <EventsList events={events} />;
 }
 
 export default EventPage;
+
+export async function loader() {
+  const response = await fetch('http://localhost:8080/events');
+  if (!response.ok) {
+    // .......
+  } else {
+    const resData = await response.json();
+    return resData.events;
+  }
+}
