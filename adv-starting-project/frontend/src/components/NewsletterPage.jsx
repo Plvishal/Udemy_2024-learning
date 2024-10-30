@@ -1,10 +1,11 @@
 import NewsletterSignup from './NewsletterSignup';
+import PageContent from './PageContent';
 
 function NewsletterPage() {
   return (
-    // <PageContent title="Join our awesome newsletter!">
-    <NewsletterSignup />
-    // </PageContent>
+    <PageContent title="Join our awesome newsletter!">
+      <NewsletterSignup />
+    </PageContent>
   );
 }
 
