@@ -1,9 +1,9 @@
 // import React from 'react';
-import { json, useLoaderData } from 'react-router-dom';
+import { json, useRouteLoaderData } from 'react-router-dom';
 import EventItem from '../components/EventItem';
 
 function EventDetailPage() {
-  const data = useLoaderData();
+  const data = useRouteLoaderData('event_detail');
   return (
     <>
       {/* <h1>Event Detail Page</h1>
