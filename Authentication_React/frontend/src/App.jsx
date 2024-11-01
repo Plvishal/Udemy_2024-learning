@@ -16,12 +16,15 @@ import NewsletterPage, { action as newsletterAction } from './pages/Newsletter';
 import AuthenticationPage, {
   action as authAction,
 } from './pages/Authentication';
+import { loader as tokenLoader } from './util/auth.js';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
+    id: 'root',
+    loader: tokenLoader,
     children: [
       { index: true, element: <HomePage /> },
       {

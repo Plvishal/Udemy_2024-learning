@@ -24,7 +24,6 @@ export async function action({ request }) {
     email: data.get('email'),
     password: data.get('password'),
   };
-
   const response = await fetch('http://localhost:8080/' + mode, {
     method: 'POST',
     headers: {
@@ -32,7 +31,6 @@ export async function action({ request }) {
     },
     body: JSON.stringify(authData),
   });
-
   if (response.status === 422 || response.status === 401) {
     return response;
   }
