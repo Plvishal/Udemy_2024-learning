@@ -17,6 +17,7 @@ import AuthenticationPage, {
   action as authAction,
 } from './pages/Authentication';
 import { loader as tokenLoader } from './util/auth.js';
+import { action as actionLogout } from './pages/Logout.jsx';
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,7 @@ const router = createBrowserRouter([
         element: <NewsletterPage />,
         action: newsletterAction,
       },
+      { path: 'logout', action: actionLogout },
     ],
   },
 ]);
