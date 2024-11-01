@@ -1,18 +1,1 @@
-{
-  "events": [
-    {
-      "title": "A new event",
-      "image": "https://media.gettyimages.com/id/2127929960/photo/cannonball-jelly.jpg?s=2048x2048&w=gi&k=20&c=WEVipLJRVoULCwP4p2yfsztBks-dHvHWqUleTZS1BMs=",
-      "date": "2022-10-01",
-      "description": "Some awesome event!",
-      "id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
-    }
-  ],
-  "users": [
-    {
-      "email": "vishal@gmail.com",
-      "password": "$2a$12$a6TxVUREO2y699izcscj3OjSjqCi9vbZxN0wAPDG7t3NtGVrZ5GmS",
-      "id": "77073c80-95a8-452c-b8f4-867f4d1e8955"
-    }
-  ]
-}
+{"events":[{"title":"A new event","image":"https://media.gettyimages.com/id/2127929960/photo/cannonball-jelly.jpg?s=2048x2048&w=gi&k=20&c=WEVipLJRVoULCwP4p2yfsztBks-dHvHWqUleTZS1BMs=","date":"2022-10-01","description":"Some awesome event!","id":"2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"}],"users":[{"email":"vishal@gmail.com","password":"$2a$12$a6TxVUREO2y699izcscj3OjSjqCi9vbZxN0wAPDG7t3NtGVrZ5GmS","id":"77073c80-95a8-452c-b8f4-867f4d1e8955"}]}
