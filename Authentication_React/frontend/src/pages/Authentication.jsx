@@ -45,5 +45,8 @@ export async function action({ request }) {
   }
 
   // soon :manage that token
+  const { token } = await response.json();
+  localStorage.setItem('token', token);
+
   return redirect('/');
 }
