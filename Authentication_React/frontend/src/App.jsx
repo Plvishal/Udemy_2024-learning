@@ -16,7 +16,7 @@ import NewsletterPage, { action as newsletterAction } from './pages/Newsletter';
 import AuthenticationPage, {
   action as authAction,
 } from './pages/Authentication';
-import { loader as tokenLoader, checkAuthLoader } from './util/auth.js';
+import { checkAuthLoader, tokenLoader } from './util/auth';
 import { action as actionLogout } from './pages/Logout.jsx';
 
 const router = createBrowserRouter([
