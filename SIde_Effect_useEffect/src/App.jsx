@@ -8,18 +8,22 @@ import logoImg from './assets/logo.png';
 import { sortPlacesByDistance } from './loc.js';
 import { useEffect } from 'react';
 
+const storeIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
+const storedPlaces = storeIds.map((id) =>
+  AVAILABLE_PLACES.find((place) => place.id === id)
+);
 function App() {
   const modal = useRef();
   const selectedPlace = useRef();
   const [availablePlaces, setAvailablePlaces] = useState([]);
-  const [pickedPlaces, setPickedPlaces] = useState([]);
-  useEffect(() => {
-    const storeIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
-    const storedPlaces = storeIds.map((id) =>
-      AVAILABLE_PLACES.find((place) => place.id === id)
-    );
-    setPickedPlaces(storedPlaces);
-  }, []);
+  const [pickedPlaces, setPickedPlaces] = useState(storedPlaces);
+  // useEffect(() => {
+  //   const storeIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
+  //   const storedPlaces = storeIds.map((id) =>
+  //     AVAILABLE_PLACES.find((place) => place.id === id)
+  //   );
+  //   setPickedPlaces(storedPlaces);
+  // }, []);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
