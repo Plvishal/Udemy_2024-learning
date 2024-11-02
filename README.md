@@ -13,3 +13,11 @@
 
 ///
 
+\*Quiz App Project
+///
+
+1. What we can practice in this project
+   a. Dealing with Effect Dependecies @ Cleanup
+   b. Combining Effects with other react concepts
+   c. 
+   ///
