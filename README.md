@@ -9,5 +9,6 @@
 5. Remember when we are use useEffect here it runs Synchronously and exectued by line
 6. When we are put this value out of function because we don't need to executed to again and again
 7. When user want to remove item from list but after 3 sec item remove even we are clicking on No because behind the scene setTimeOut() is running
+8. The problem when we are provide object/function in useEffect dependencies array : Re-Creation of function, the solution is useCallback
 
 ///
