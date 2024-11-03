@@ -20,4 +20,6 @@
    a. Dealing with Effect Dependecies @ Cleanup
    b. Combining Effects with other react concepts
    c. 
+2. Shuffling answer : We can't change in original array thta's why we first copy the previous answer and shuffle
+3. When we completed quiz then UI break that's why first we check length and then  shuffle logic implementing
    ///
