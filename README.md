@@ -24,5 +24,6 @@
 3. When we completed quiz then UI break that's why first we check length and then shuffle logic implementing
 4. Adding Question Timer
 5. Add useCallback function that help handleSelectAnswer function don't re-created
+6. Key is unique identifier hich items have changed, updated, or deleted from the Lists
 
    ///
