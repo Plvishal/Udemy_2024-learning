@@ -17,7 +17,7 @@ function Quiz() {
   }, []);
   const handleSkipAnswer = useCallback(
     () => handleSelecAnswer(null),
-    [handleSkipAnswer]
+    [handleSelecAnswer]
   );
   if (quizIsComplete) {
     return (
