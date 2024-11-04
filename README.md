@@ -19,10 +19,10 @@
 1. What we can practice in this project
    a. Dealing with Effect Dependecies @ Cleanup
    b. Combining Effects with other react concepts
-   c. 
+   c.
 2. Shuffling answer : We can't change in original array thta's why we first copy the previous answer and shuffle
-3. When we completed quiz then UI break that's why first we check length and then  shuffle logic implementing
-4. Adding Question Timer 
-5. Add useCallback function that help  handleSelectAnswer  function don't re-created
+3. When we completed quiz then UI break that's why first we check length and then shuffle logic implementing
+4. Adding Question Timer
+5. Add useCallback function that help handleSelectAnswer function don't re-created
 
    ///

@@ -5,12 +5,18 @@ import { useState } from 'react';
 function QuestionTimer({ timeout, onTimeout }) {
   const [remainingTime, setRemainigTIme] = useState(timeout);
   useEffect(() => {
-    setTimeout(onTimeout, timeout);
+    const timer = setTimeout(onTimeout, timeout);
+    return () => {
+      clearTimeout(timer);
+    };
   }, [timeout, onTimeout]);
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setRemainigTIme((prevRemainingTime) => prevRemainingTime - 100);
     }, 100);
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
