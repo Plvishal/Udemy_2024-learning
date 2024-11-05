@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useState } from 'react';
 import QUESTIONS from '../questions.js';
 import quizCompleteImg from '../assets/quiz-complete.png';
-import QuestionTimer from './QuestionTimer.jsx';
+import Question from './Question.jsx';
 function Quiz() {
   const [answerState, setAnswerState] = useState('');
   const [userAnswer, setUserAnswer] = useState([]);
@@ -44,41 +44,17 @@ function Quiz() {
       </div>
     );
   }
-  // After is block executed then run this line of code
-  const suffledAnswers = [...QUESTIONS[activeQuestionIndex].answers];
-  suffledAnswers.sort(() => Math.random() - 0.5);
   return (
     <div id="quiz">
-      <div id="question">
-        <QuestionTimer
-          key={activeQuestionIndex}
-          timeout={10000}
-          onTimeout={handleSkipAnswer}
-        />
-        <h2>{QUESTIONS[activeQuestionIndex].text}</h2>
-        <ul id="answers">
-          {suffledAnswers.map((answer) => {
-            const isSelected = userAnswer[userAnswer.length - 1] === answer;
-            let cssClasses = '';
-            if (answerState === 'answered' && isSelected) {
-              cssClasses = 'selected';
-            }
-            if (answerState === 'correct' || ('wrong' && isSelected)) {
-              cssClasses = answerState;
-            }
-            return (
-              <li key={answer} className="answer">
-                <button
-                  onClick={() => handleSelecAnswer(answer)}
-                  className={cssClasses}
-                >
-                  {answer}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <Question
+        key={activeQuestionIndex}
+        questionText={QUESTIONS[activeQuestionIndex].text}
+        answers={QUESTIONS[activeQuestionIndex].answers}
+        answerState={answerState}
+        selectedAnswer={userAnswer[userAnswer.length - 1]}
+        onSelectAnswer={handleSelecAnswer}
+        onSkipAnswer={handleSkipAnswer}
+      />
     </div>
   );
 }
