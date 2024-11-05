@@ -8,11 +8,19 @@ function Question({ index, onSelectAnswer, onSkipAnswer }) {
     selectedAnswer: '',
     isCorrect: null,
   });
+  let timer = 10000;
+  if (answer.selectedAnswer) {
+    timer = 1000;
+  }
+  if (answer.selectedAnswer !== null) {
+    timer = 2000;
+  }
   function handleSelectAnswer(answer) {
     setAnswer({
       selectedAnswer: answer,
       isCorrect: null,
     });
+
     setTimeout(() => {
       setAnswer({
         selectedAnswer: answer,
@@ -31,7 +39,12 @@ function Question({ index, onSelectAnswer, onSkipAnswer }) {
   }
   return (
     <div id="question">
-      <QuestionTimer timeout={10000} onTimeout={onSkipAnswer} />
+      <QuestionTimer
+        key={timer}
+        timeout={timer}
+        onTimeout={answer.selectedAnswer === '' ? onSkipAnswer : null}
+        mode={answerState}
+      />
       <h2>{questions[index].text}</h2>
       <Answers
         answers={questions[index].answers}
