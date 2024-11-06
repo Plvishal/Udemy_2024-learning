@@ -39,3 +39,10 @@
 11. Handling HTTP Error
 
 ///
+
+<!-- Custom hooks -->
+<!-- Rules of Hooks -->
+
+12. React Hooks must not be called outside of React components functions
+13. React Hooks must not be called in nested code statements( e.g inside of if-statement)
+
