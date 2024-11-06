@@ -32,5 +32,7 @@
 
    ///
 
-7. Directly we can't use fetch() method to fetch data this is the side effect
+7. Directly we can't use fetch() method to fetch data this is the side effect and infinite loop
+8. When we use useEffect() then it is executed once after components re-render and avoid infinite loop
+
    ///
