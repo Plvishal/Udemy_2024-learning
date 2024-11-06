@@ -29,3 +29,8 @@
    ///
 
    <!-- Sending HTTP Requests -->
+
+   ///
+
+7. Directly we can't use fetch() method to fetch data this is the side effect
+   ///
