@@ -35,5 +35,6 @@
 7. Directly we can't use fetch() method to fetch data this is the side effect and infinite loop
 8. When we use useEffect() then it is executed once after components re-render and avoid infinite loop
 9. We can improve this code with help of async and await
+10. When we are fetching data from backend it takes some time so we can handle loading state for good user experience
 
-   ///
+///
